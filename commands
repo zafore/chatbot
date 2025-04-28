@@ -1,0 +1,13 @@
+
+python app.py  // to run
+
+python -m pip install --upgrade pip   on administrator
+python -m ensurepip --default-pip 
+
+python -m pip --version   display V
+pip 
+pip install flask 
+
+pip install flask requests numpy to install many
+
+pip freeze > requirements.txt // To write all needs 
