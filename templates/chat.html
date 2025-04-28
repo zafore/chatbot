@@ -1,0 +1,19 @@
+<!-- templates/chat.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Dynamic Chatbot</title>
+</head>
+<body>
+    <h1>Dynamic AI Chatbot 🤖</h1>
+    <form method="POST">
+        <input type="text" name="message" placeholder="Say something..." required style="width:300px;">
+        <button type="submit">Send</button>
+    </form>
+
+    {% if bot_response %}
+    <p><strong>Bot:</strong> {{ bot_response }}</p>
+    {% endif %}
+</body>
+</html>
