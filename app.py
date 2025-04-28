@@ -1,8 +1,13 @@
+import os
+
 from flask import Flask, request, render_template
 import pickle
 from models import Session, Message
 from sklearn.feature_extraction.text import TfidfVectorizer
 from sklearn.linear_model import LogisticRegression
+
+
+
 
 app = Flask(__name__)
 
@@ -78,4 +83,6 @@ def home():
 if __name__ == "__main__":
     # Initial training
     vectorizer, model = train_model()
-    app.run(debug=True)
+    port = int(os.environ.get('PORT', 5000))  
+app.run(host='0.0.0.0', port=port)
+    # app.run(debug=True)
